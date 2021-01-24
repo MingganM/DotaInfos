@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    font-size: 80%;
+    @media screen and (min-width:40.625em){ //650 px
+        font-size: 100%;
+    }
+    @media screen and (min-width:81.25em){ //650 px
+        font-size: 120%;
+    }
+}
+
+$red: rgb(168, 38, 38);
+$white: rgb(240, 240, 240);
+$black: rgb(26, 26, 26);
+
+@import "./scss/nav.scss";
+@import "./scss/Banner.scss";
+@import "./scss/Heroes.scss";

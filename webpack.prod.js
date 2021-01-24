@@ -9,10 +9,10 @@ module.exports = merge(webpackCommon, {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/index.html",
-            scriptLoading: "defer",
-            minify: {
-                removeComments: true,
-            }
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/heroes.html",
+            filename: "heroes.html"
         }),
         new MiniCssExtractPlugin({
             filename: "style.css"
@@ -38,6 +38,14 @@ module.exports = merge(webpackCommon, {
                     presets: ['@babel/preset-env']
                   }
                 }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ]
             }
         ]
     }

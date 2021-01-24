@@ -16,6 +16,7 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.10.0",
     "node-sass": "^4.14.1",
@@ -28,8 +29,7 @@
     "webpack-merge": "^5.1.1"
   },
   "browserslist": [
-    "last 2 version",
-    "> 0.5%",
+    "> 0.2%",
     "not dead"
   ],
   "dependencies": {

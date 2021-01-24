@@ -7,6 +7,10 @@ module.exports = merge(webpackCommon, {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/heroes.html",
+            filename: "heroes"
         })
     ],
     module: {
@@ -17,6 +21,14 @@ module.exports = merge(webpackCommon, {
                     "style-loader",
                     "css-loader",
                     "sass-loader"
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader'
+                    },
                 ]
             }
         ]

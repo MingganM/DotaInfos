@@ -1,0 +1,21 @@
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./images/banner.jpg') center/cover;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text, &__heading{
+        color: $white;
+    }
+    &__heading{
+        font-size: 4rem;   
+    }
+    &__text{
+        font-size: 2rem;
+    }
+}

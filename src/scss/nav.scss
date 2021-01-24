@@ -1,0 +1,42 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__img{
+        img{
+            width: 70%;
+        }
+    }
+    &__ul{
+        list-style-type: none;
+        display: flex;
+    }
+    &__link{
+        padding: 1.3rem;
+        font-size: 1.3rem;
+        display: block;
+        color: $white;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+        
+        &::before{
+            content: "";
+            transition: 0.2s width; 
+            position: absolute;
+            bottom: 5px;
+            width: 0;
+            height: 5px;
+            background-color: $white;
+        }
+
+        &:hover::before{
+            width: 50%;
+        }
+    }
+}
