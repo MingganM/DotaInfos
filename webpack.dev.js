@@ -24,10 +24,18 @@ module.exports = merge(webpackCommon, {
                 ]
             },
             {
+                test: /\.html$/i,
+                use: ["html-loader"]
+            },
+            {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'file-loader',
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "images/"
+                        }
                     },
                 ]
             }
